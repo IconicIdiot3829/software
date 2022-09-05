@@ -1,0 +1,11 @@
+#!/bin/bash
+echo " -----------------------------------------------------------"
+echo "              Debian2ISO V1, by IconicIdiot3829             "
+echo " -----------------------------------------------------------"
+sudo apt-get install wget make gcc bc syslinux genisoimage
+git clone https://github.com/ivandavidov/minimal
+chmod -R +x minimal/src/
+cd src
+./build_minimal_linux_live.sh
+echo "Finished! Make sure to scroll back and check for errors, though."
+echo "Check the /tmp directory for your ISO, or check everywhere else."
